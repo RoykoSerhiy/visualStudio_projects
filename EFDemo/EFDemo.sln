@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDemo.Entities", "EFDemo.Entities\EFDemo.Entities.csproj", "{BDAE4093-9132-4AB6-867E-D99CDE67B2BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDemo.ConsoleUI", "EFDemo.ConsoleUI\EFDemo.ConsoleUI.csproj", "{B30CF938-0120-49AA-8B79-86755AF74742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFdemo.WpfUi", "EFdemo.WpfUi\EFdemo.WpfUi.csproj", "{35D1AB50-ABB7-4DCB-A96A-20CCCBA419D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDAE4093-9132-4AB6-867E-D99CDE67B2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDAE4093-9132-4AB6-867E-D99CDE67B2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDAE4093-9132-4AB6-867E-D99CDE67B2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDAE4093-9132-4AB6-867E-D99CDE67B2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30CF938-0120-49AA-8B79-86755AF74742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30CF938-0120-49AA-8B79-86755AF74742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30CF938-0120-49AA-8B79-86755AF74742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30CF938-0120-49AA-8B79-86755AF74742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D1AB50-ABB7-4DCB-A96A-20CCCBA419D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D1AB50-ABB7-4DCB-A96A-20CCCBA419D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D1AB50-ABB7-4DCB-A96A-20CCCBA419D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D1AB50-ABB7-4DCB-A96A-20CCCBA419D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

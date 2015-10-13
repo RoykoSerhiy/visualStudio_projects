@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.07.14", "15.07.14\15.07.14.csproj", "{09FDE333-0DBE-4693-98AE-441355AFCE04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exersize2", "exersize2\exersize2.csproj", "{D89C68F3-4D4D-400A-AE74-5C7D3D011263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09FDE333-0DBE-4693-98AE-441355AFCE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FDE333-0DBE-4693-98AE-441355AFCE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FDE333-0DBE-4693-98AE-441355AFCE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FDE333-0DBE-4693-98AE-441355AFCE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89C68F3-4D4D-400A-AE74-5C7D3D011263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89C68F3-4D4D-400A-AE74-5C7D3D011263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89C68F3-4D4D-400A-AE74-5C7D3D011263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89C68F3-4D4D-400A-AE74-5C7D3D011263}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

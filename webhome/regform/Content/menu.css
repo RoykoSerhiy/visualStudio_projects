@@ -1,0 +1,61 @@
+﻿body {
+    background-image:url(images/b2.jpg);
+    opacity:0.9;
+    background-size:cover;
+    background-attachment:fixed;
+}
+div#header {
+    height:130px;
+    width:auto;
+    background-image: url(images/header_img.jpg);
+    background-size:cover;
+    position:relative;
+}
+div#footer {
+    height:130px;
+    width:auto;
+   
+    
+}
+div#content {
+    height:400px;
+    width:auto;
+    
+}
+div.Button {
+    
+    height:45px;
+    width:100px;
+    font-size:medium;
+    text-align:center;
+    padding-top:20px;
+    font-size:20px;
+    font-weight:bold;
+    color:black;
+}
+div.Button:hover {
+        background-color:green;
+        opacity:0.5;
+    }
+a {
+    text-decoration:none;
+    
+}
+.login {
+    position:absolute;
+    margin-left:93%;
+    font-size:x-large;
+    color:white;
+}
+div.loading {
+    width: 100%;
+    height:100%;
+    position:absolute;
+    top: 0;
+    background-color:rgba(255, 255, 255, 0.42);
+}
+img.loadImg {
+    top:50%;
+    left:50%;
+    position:relative;
+}

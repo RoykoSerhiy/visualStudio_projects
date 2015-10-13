@@ -1,0 +1,15 @@
+﻿<Window x:Class="_002_DockPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Top" HorizontalAlignment="Left">Button aligned</Button>
+        <Button DockPanel.Dock="Top" HorizontalAlignment="Right">Button aligned</Button>
+        <Button DockPanel.Dock="Top" HorizontalAlignment="Center">Button aligned</Button>
+        <Button DockPanel.Dock="Top">TopButton</Button>
+        <Button DockPanel.Dock="Bottom">ButtomButton</Button>
+        <Button DockPanel.Dock="Left">LeftButton</Button>
+        <Button DockPanel.Dock="Right">RightButton</Button>
+        <Button>Button</Button>
+    </DockPanel>
+</Window>

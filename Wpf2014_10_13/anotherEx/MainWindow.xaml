@@ -1,0 +1,13 @@
+﻿<Window x:Class="anotherEx.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:Controls="clr-namespace:anotherEx.Views">
+    <Grid>
+        <ListBox>
+            <Controls:MyListBoxItem Width="300"  ButtonText="Click ME"/>
+            <Controls:MyListBoxItem Width="300"  ButtonText="Push Me"/>
+            <Controls:MyListBoxItem Width="300"  ButtonText="Kill Me"/>
+        </ListBox>
+    </Grid>
+</Window>

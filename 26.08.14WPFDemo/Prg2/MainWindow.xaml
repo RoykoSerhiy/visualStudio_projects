@@ -1,0 +1,37 @@
+﻿<Window xmlns:Views="clr-namespace:Prg2.Views"  x:Class="Prg2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="500" Width="880">
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="150"></RowDefinition>
+            <RowDefinition Height="4"></RowDefinition>
+            <RowDefinition MinHeight="150"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="200"></ColumnDefinition>
+            <ColumnDefinition Width="4" ></ColumnDefinition>
+            <ColumnDefinition Width="3*" MinWidth="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Stretch"></GridSplitter>
+        <GridSplitter Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch"></GridSplitter>
+        <!--Conrols-->
+        <GroupBox Header="Групи Товарів" FontWeight="Bold"
+                  Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
+           <Views:myTreeView />
+        </GroupBox>
+       
+        <GroupBox Header="Товари" FontWeight="Bold"
+                  Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3">
+            <Views:DataGridTovaru />
+        </GroupBox>
+        
+        
+        <GroupBox Header="Пакування Товару" FontWeight="Bold"
+                  Grid.Row="2" Grid.Column="2">
+            <Views:DataGridPakuvannya />
+        </GroupBox>
+       
+        
+    </Grid>
+</Window>

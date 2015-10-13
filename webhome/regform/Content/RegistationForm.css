@@ -1,0 +1,39 @@
+﻿.formHeader {
+    text-align:center;
+}
+.error {
+    background-color:red;
+    
+}
+.formHeader > span {
+    font-weight:700;
+    font-family:Arial;
+    font-size:larger;
+}
+.regConteiner {
+    max-width:400px;
+    margin:20px auto;
+
+}
+.row {
+    display:block;
+    overflow:hidden;
+    margin:10px 0 0 80px;
+}
+.title {
+    min-width:100px;
+    float:left;
+}
+.buttons {
+    min-width:60px;
+    padding-left: 60px;
+}
+.inputData {
+    margin-left:110px;
+}
+.loginForm {
+    left:500px;
+    position:relative;
+    font-family:Broadway;
+    font-size:large;
+}

@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="ControlExamples.masterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="content/Main.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form" runat="server">
+        <div id="header">
+
+
+        </div>
+    <div>
+        <asp:ContentPlaceHolder ID="cphBody" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </div>
+        <div id="footer"></div>
+    </form>
+</body>
+</html>

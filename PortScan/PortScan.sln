@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortScan", "PortScan\PortScan.csproj", "{DFADDDDF-4BD1-4DFB-86CC-8A00CC87C85C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "portScanSocket", "portScanSocket\portScanSocket.csproj", "{EBFC83F2-8AD7-4E1A-8365-F65D5C90272F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailClient", "MailClient\MailClient.csproj", "{B9EEE818-670E-40DB-9686-6C6F371514EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFADDDDF-4BD1-4DFB-86CC-8A00CC87C85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFADDDDF-4BD1-4DFB-86CC-8A00CC87C85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFADDDDF-4BD1-4DFB-86CC-8A00CC87C85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFADDDDF-4BD1-4DFB-86CC-8A00CC87C85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBFC83F2-8AD7-4E1A-8365-F65D5C90272F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFC83F2-8AD7-4E1A-8365-F65D5C90272F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFC83F2-8AD7-4E1A-8365-F65D5C90272F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFC83F2-8AD7-4E1A-8365-F65D5C90272F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9EEE818-670E-40DB-9686-6C6F371514EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9EEE818-670E-40DB-9686-6C6F371514EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9EEE818-670E-40DB-9686-6C6F371514EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9EEE818-670E-40DB-9686-6C6F371514EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainPage.master.cs" Inherits="regform.MainPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="Content/menu.css" />
+    <link type="text/css" rel="stylesheet" href="Content/MenuList.css" />
+    <link type="text/css" rel="stylesheet" href="Content/reset.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="styles"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="scripts" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           
+            <div id="header">
+                <asp:Menu ID="menu" runat="server" Orientation="Vertical" CssClass="menu">
+                    <Items>
+                       <asp:MenuItem Text="Drivers" NavigateUrl="~/DriverProfile/ListPage.aspx"></asp:MenuItem>
+                       <asp:MenuItem Text="Users" NavigateUrl="~/UserProfile/UserList.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:ContentPlaceHolder ID="hrefs" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:LoginStatus runat="server" CssClass="login" LogoutText="Logout" LogoutAction="RedirectToLoginPage" OnLoggingOut="Unnamed_LoggingOut" />
+            </div>
+         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+ <asp:UpdatePanel runat="server" ID="upRegField">
+         <ContentTemplate>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="RegField" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </ContentTemplate>
+ </asp:UpdatePanel>
+             <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="upRegField">
+                        <ProgressTemplate>
+                            
+                            <div class="loading">
+                                <img class="loadImg" src="/Content/images/wheel.GIF" />
+                            </div>
+                        </ProgressTemplate>
+                    </asp:UpdateProgress>
+     
+            <div id="footer">
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

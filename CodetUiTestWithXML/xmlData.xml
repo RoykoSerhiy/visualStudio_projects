@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DataContext>
+	<TestData
+	FirstName="Petr"
+	LastName="Petrov"
+	Result="Petr Petrov, Hey!"
+	/>
+	<TestData
+	FirstName="Ivan"
+	LastName="Ivanov"
+	Result="Ivan Ivanov, Hey!"
+	/>
+</DataContext>

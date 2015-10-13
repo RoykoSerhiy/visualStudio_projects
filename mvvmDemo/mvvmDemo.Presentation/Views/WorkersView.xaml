@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="mvvmDemo.Presentation.Views.WorkersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <DockPanel LastChildFill="True">
+        <DataGrid Name="dgWorkersUC" AutoGenerateColumns="False" CanUserAddRows="False" 
+                  DockPanel.Dock="Top" VerticalAlignment="Top" CanUserDeleteRows="False" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="Id" IsReadOnly="True" Binding="{Binding Id}"/>
+                <DataGridTextColumn Width="3*" Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Width="3*" Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Width="3*" Header="Position" Binding="{Binding Position}"/>
+                <DataGridTextColumn Width="3*" Header="Phone" Binding="{Binding Phone}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

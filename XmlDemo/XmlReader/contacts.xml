@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cotacts>
+  <contact>
+    <name status="friend">Pupkin V.</name>
+    <phone>22-33-44</phone>
+    <email>pupkin@gmail.com</email>
+  </contact>
+  <contact>
+    <name>Bubkin P.</name>
+    <phone>22-99-88</phone>
+    <email>bubkin@gmail.com</email>
+  </contact>
+  <contact>
+    <name>Zubkin M.</name>
+    <phone>21-81-91</phone>
+    <email>zubkin@gmail.com</email>
+  </contact>
+  <contact>
+    <name>Bulkin V.</name>
+    <phone>77-81-92</phone>
+    <email>bulkin@gmail.com</email>
+  </contact>
+</cotacts>
+  

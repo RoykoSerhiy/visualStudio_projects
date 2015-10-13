@@ -1,0 +1,1027 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="766e7e66-2122-4513-b3d7-cdb1f84d2b6c"
+  name="magaz" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="aa769cf4-42b1-4960-8aad-05369d8cb21f"
+        name="Basket"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="7d88cdfe-8263-4125-8bc8-20c2e6108a4c"
+            isDerived="false"
+            sourceEndRoleName="Basket"
+            targetEndRoleName="Buyer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ce2e894c-47cd-4ee8-b057-b1cc4c8cbeb0"
+              LastKnownName="Buyer"
+              LastKnownLocation="magaz.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aa9d9936-466d-4d44-9e95-917cdc02544a"
+                  name="Basket"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c574d143-99f5-4302-860f-be42a9f922a3"
+                  name="Buyer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="4aa1aeb8-bfd9-4d7e-9dd6-92f7154853c9"
+            name="&lt;List&gt;Products"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="43d2d61f-a43e-475f-a096-b54edbaa6da1"
+            name="BuyerID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c45294c6-2a90-4774-aec9-b3b5628988f0"
+                LastKnownName="int"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7cf50d6a-9c24-4aef-9013-e72cc31fc071"
+            name="void Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="00616c66-edb1-4202-8872-e4264be8cc98"
+                  name="int ProductID"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1e2dd4b2-9622-4013-abf5-fff89b78a79e"
+            name="void Pay"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ed8512f0-05c5-440c-849f-51252577de1d"
+        name="Product"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="71593a4f-fd32-463a-bf15-98edf50a8b21"
+            isDerived="false"
+            sourceEndRoleName="Product"
+            targetEndRoleName="Basket"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="aa769cf4-42b1-4960-8aad-05369d8cb21f"
+              LastKnownName="Basket"
+              LastKnownLocation="magaz.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f3df367-70ab-4497-9e0b-0ab967de5ec7"
+                  name="Product"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f14e706c-7fdf-4918-9fd3-266cf3e24315"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="66c0770e-7dfa-451e-a120-1dfe5c996bf7"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ab65ffc-4ac5-4871-8f5a-7ee6cb835038"
+                  name="Basket"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="8df9d7ee-1f73-4259-ab30-afdc0f59635c"
+            name="ProductID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c45294c6-2a90-4774-aec9-b3b5628988f0"
+                LastKnownName="int"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="020e00ec-7979-4e5e-81a9-1202e0c7f111"
+            name="ProdName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+                LastKnownName="string"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2bcd56ef-2360-44ef-886b-cd2540d02639"
+            name="Price"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7a531f51-8b07-4719-856e-ff9fdfe662d7"
+                LastKnownName="deciml"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7a18af9b-4d9a-4de2-94cb-fdf3c487d7c9"
+            name="Category"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+                LastKnownName="string"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="612d08cd-cde0-494b-a526-62afb97b2275"
+            name="Currency"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+                LastKnownName="string"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="cc63ecd6-ed3a-4882-b9ab-f6e94594a840"
+            name="void AddProduct"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b7521681-a3fb-40c1-89ba-6d2dfa03b59e"
+            name="void DeleteProduct"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d2dbc182-fe2a-4dab-81f7-ca90ba68d1e2"
+        name="Pay System"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="4b74cc1a-fe9a-45d4-9d6d-23d4d2f4971d"
+            name="void Authorization"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="cac3b22a-000c-43a3-b6e4-8cf51b6be1f1"
+            name="void Registration"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5780c327-842a-4da5-a161-464d454caced"
+            name="void Pay"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4cc0ed40-7617-454e-b37f-1a908e622bfc"
+            name="decimal GetExpence"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d85a8dc1-26c5-4871-98b4-5b07630a9771"
+            name="void AddMoney"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ce2e894c-47cd-4ee8-b057-b1cc4c8cbeb0"
+        name="Buyer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="413b1924-afda-41f8-8d62-7db78d19eaa9"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+                LastKnownName="string"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="abeec47f-e35c-4b28-8d3a-9247ce16ac2f"
+            name="LigIn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+                LastKnownName="string"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ea6790fd-118d-49de-9836-4bb3ef66919c"
+            name="password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+                LastKnownName="string"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="75f57260-e6a1-46c7-bcf4-c820c201e444"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c45294c6-2a90-4774-aec9-b3b5628988f0"
+                LastKnownName="int"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6d1d4471-fc1e-42ea-a645-bcf0eda460cc"
+            name="void Register"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4e3dc5dc-0fb3-4e6d-878d-f12f25176367"
+            name="void Login"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="800ff080-258f-4dd3-9d84-dc534df0ce70"
+            name="void deleteAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2f779e9e-9a66-47d4-8b64-46681e01683e"
+        name="Pay System"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="2ae59b9a-ef70-4929-9e95-607a26d2c8f6">
+            <interfaceMoniker
+              Id="d2dbc182-fe2a-4dab-81f7-ca90ba68d1e2"
+              LastKnownName="Pay System"
+              LastKnownLocation="magaz.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="5613bf32-29b1-49cc-bbdf-b75db3b536fc"
+            name="Balance"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="590e252c-5c26-478c-a15c-148fcc9659f0"
+                LastKnownName="decimal"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b674ce15-ebec-41cf-ac08-5d2a190fdc9d"
+            name="void Authorization"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1c6c101e-68c7-48b2-ad0b-d79ee24ce3e0"
+            name="void Registration"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="79db1191-4fb5-4d7a-b7f7-4060ef646c74"
+            name="void Pay"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="479ef3c6-beb1-4cb5-b1e3-3037c5c93d62"
+            name="decimal GetExpence"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="40e83657-92ef-4664-917a-ff7591ca4cd7"
+            name="void AddMoney"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="13ca6eb3-9885-47a6-99a0-217afa518ca7"
+        name="Form"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="93aca25a-d295-4cbc-9469-685bb7be6603"
+            isDerived="false"
+            sourceEndRoleName="Form"
+            targetEndRoleName="Buyer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ce2e894c-47cd-4ee8-b057-b1cc4c8cbeb0"
+              LastKnownName="Buyer"
+              LastKnownLocation="magaz.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="47411866-588d-43ab-872e-714879bd9937"
+                  name="Form"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f83bbaf-e2c2-4091-8544-857e1359c854"
+                  name="Buyer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="8d53cf2b-1413-4f64-aa18-a832e0b13e5d"
+            name="Adress"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+                LastKnownName="string"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="03570f71-9bbe-4cfe-9c84-14d07c4e273a"
+            name="description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+                LastKnownName="string"
+                LastKnownLocation="magaz.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3b0766ea-b2e8-40c7-afca-080e2cf808e1"
+            name="void Send"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7a531f51-8b07-4719-856e-ff9fdfe662d7"
+        name="deciml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c45294c6-2a90-4774-aec9-b3b5628988f0"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="43c299d4-7cc5-4b51-aabc-d625568fb05f"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="590e252c-5c26-478c-a15c-148fcc9659f0"
+        name="decimal" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="cfade124-ae03-4806-8274-ccdf1a31eb65"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="6b3d1025-a569-47df-8a69-11e24e85a8a9"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="866ac515-c673-4f1e-89dc-0a000a2bc1d3"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b1a7d56e-06f7-4364-a7aa-32f58c8b016b"
+                  LastKnownName="Click on button registation"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="b1a7d56e-06f7-4364-a7aa-32f58c8b016b"
+            name="Click on button registation"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6cc1cd42-06d5-4b8a-b596-8eb106835ec1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="53fab7bb-4745-454e-8f13-c42987de743b"
+                  LastKnownName="Enter fiest last name"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="53fab7bb-4745-454e-8f13-c42987de743b"
+            name="Enter fiest last name"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="90295e30-77f7-47db-b825-095de8b0ab2d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="745e2d7b-adb5-4465-8a4c-f51106991070"
+                  LastKnownName="Enter mail addres"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="745e2d7b-adb5-4465-8a4c-f51106991070"
+            name="Enter mail addres"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0d40b595-c75c-4ed9-9124-f85ef8f10853"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="0fd0b266-dee7-4501-aca1-291fec10ec10"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="e07fad30-2bd7-4bca-ad0c-f97b25cd9d0d"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5ff5f7c3-4f2a-4ccc-98f7-f8264a81a37e"
+                guard="if mail exist"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="745e2d7b-adb5-4465-8a4c-f51106991070"
+                  LastKnownName="Enter mail addres"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="155bc4aa-a0d1-4121-b9d0-1fd40a796d79"
+                guard="mail adress not exist"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="11aa8d4d-0c55-44cb-9ef1-98e00c7f19fc"
+                  LastKnownName="enter phone"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="97a0d1ba-f763-43ac-91a0-81995bbc6da0"
+            name="Enter date of birth and sex"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4220f55c-e01b-4d43-bbd0-4237f783ff91"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="453bfa5b-fc3a-4941-acb2-7588564fdce9"
+                  LastKnownName="Join1"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="0fd0b266-dee7-4501-aca1-291fec10ec10"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2bfb4c12-86e6-46e9-b152-1e00ac927bea"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="97a0d1ba-f763-43ac-91a0-81995bbc6da0"
+                  LastKnownName="Enter date of birth and sex"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="5b8c9801-c7fa-46cc-8ac2-f3bfe5013021"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="14451f34-904c-4b08-817f-581cdd27d84d"
+                  LastKnownName="Check mail addres"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="14451f34-904c-4b08-817f-581cdd27d84d"
+            name="Check mail addres"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d0dde51c-7472-4683-bb5c-6ff6cedd3fa0"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="e07fad30-2bd7-4bca-ad0c-f97b25cd9d0d"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="11aa8d4d-0c55-44cb-9ef1-98e00c7f19fc"
+            name="enter phone"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="92670066-85db-46aa-90a3-e8a52bb705c0"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="453bfa5b-fc3a-4941-acb2-7588564fdce9"
+                  LastKnownName="Join1"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode
+            Id="453bfa5b-fc3a-4941-acb2-7588564fdce9"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="66d2ec9b-f62a-4fa4-9fc4-05727c80efe9"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="efe558e1-c296-4f2f-9c9a-44e9b51e2ec9"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction
+            Id="8d6cb862-96bb-464c-924f-b55eba2d5661"
+            name="Kapcha"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="517e4a25-d735-4957-afb1-0c74b99a1044"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="b4b0d307-b53b-43c9-a522-c3c20910dc40"
+                  LastKnownName="Decision5"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="efe558e1-c296-4f2f-9c9a-44e9b51e2ec9"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c55ac24e-0492-4a57-99a3-65293a06e4b5"
+                guard="is kapcha true"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8d6cb862-96bb-464c-924f-b55eba2d5661"
+                  LastKnownName="Kapcha"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="8e8af5f2-8663-4a08-9e94-bd9b7e2d3187"
+                guard="is kapcha falce"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d668445d-c8e7-4f4c-9b2d-795543dbb440"
+                  LastKnownName="Send SMS"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="d668445d-c8e7-4f4c-9b2d-795543dbb440"
+            name="Send SMS"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b94f1786-49ef-43d9-91ac-fe8e4de9ec51"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="b0eb9401-588b-4919-b4e5-258a6b73f583"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="b0eb9401-588b-4919-b4e5-258a6b73f583"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ab5f32d7-53ea-4274-9462-f3fd5bf30836"
+                guard="phone not exist"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="11aa8d4d-0c55-44cb-9ef1-98e00c7f19fc"
+                  LastKnownName="enter phone"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="98f359ba-4ec7-4730-8456-7b719ccb8f90"
+                guard="Phone exist"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="fe4918c4-ea07-4e97-97a4-52107ea51cc5"
+                  LastKnownName="Enter code  in sms"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="fe4918c4-ea07-4e97-97a4-52107ea51cc5"
+            name="Enter code  in sms"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d9d8abe2-916e-42fe-8c65-b61def701f87"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="a7daed65-593f-4f0c-b2bc-518f093f5efc"
+                  LastKnownName="Decision4"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="a7daed65-593f-4f0c-b2bc-518f093f5efc"
+            name="Decision4"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="46471620-982a-460d-9de2-512b2f32ec97"
+                guard="wrong code"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d668445d-c8e7-4f4c-9b2d-795543dbb440"
+                  LastKnownName="Send SMS"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="17e9524f-9c08-492e-af6e-823f7c841602"
+                guard="true code"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ae94a1ad-5b36-4a72-8b84-eb8fb2b27907"
+                  LastKnownName="Sucsess"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="ae94a1ad-5b36-4a72-8b84-eb8fb2b27907"
+            name="Sucsess"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="188bdfdf-43d6-4031-b3e1-a402cdfa128f"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="239d5a34-c642-4f2f-b8fc-15ff7696ffce"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="239d5a34-c642-4f2f-b8fc-15ff7696ffce"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <decisionNode
+            Id="b4b0d307-b53b-43c9-a522-c3c20910dc40"
+            name="Decision5"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d6452f85-8f24-491e-92bc-704a47dd7ce6"
+                guard="true kapcha"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ae94a1ad-5b36-4a72-8b84-eb8fb2b27907"
+                  LastKnownName="Sucsess"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="7d5803e1-3929-4a11-8fae-db16adffb8bb"
+                guard="wrong kapcha"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8d6cb862-96bb-464c-924f-b55eba2d5661"
+                  LastKnownName="Kapcha"
+                  LastKnownLocation="magaz.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

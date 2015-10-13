@@ -1,0 +1,28 @@
+﻿.formHeader {
+    text-align: center;
+}
+    .formHeader > span {
+        font-weight: 700;
+        font-family: Arial;
+        font-size: larger;
+    }
+.registrationContainer {
+    max-width: 400px;
+    margin: 20px auto;
+}
+.row {
+    display: block;
+    margin: 10px 0 0 80px;
+    overflow: hidden;
+}
+.buttons {
+    max-width: 120px;
+    padding-left: 60px;
+}
+.title {
+    min-width: 100px;
+    float: left;
+}
+.inputData {
+    margin-left: 100px;
+}

@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="BStore.Presentation.Views.OrderUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             Loaded="UserControl_Loaded_1"
+             Height="300" Width="600"
+             >
+    
+    <DockPanel LastChildFill="True">
+        
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Column="0" Margin="5">
+                <Label Content="ім`я"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="tbxOrdreFilter" Height="30" Width="200" HorizontalAlignment="Left"/>
+                    <Button Name="btnFilterOK" Height="30" Width="40" Content="OK" Click="btnFilterOK_Click_1"/>
+                </StackPanel>
+
+
+
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left"
+                        Margin="5" Grid.Column="1">
+                <Label Content="Від"/>
+                <DatePicker Name="dpFrom" SelectedDateChanged="dpFrom_SelectedDateChanged_1"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right"
+                        Margin="5" Grid.Column="1">
+                    <Label Content="До"/>
+                    <DatePicker Name="dpTo" SelectedDateChanged="dpTo_SelectedDateChanged_1"/>
+                </StackPanel>
+
+            
+        </Grid>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+            <Button Name="addOrder" Content="Додати" Click="addOrder_Click_1" Width="100" Margin="5"/>
+            <Button Name="btnResetFilter" Content="Скинути" Width="100" Margin="5" Click="btnResetFilter_Click_1"/>
+            
+        </StackPanel>
+
+        <DataGrid Name="dgCatalogUC" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                  ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" IsReadOnly="True"
+                                    Header="№"
+                                    Binding="{Binding Id}"/>
+                <DataGridTextColumn Width="3*" Header="І`мя клієнта" 
+                                    Binding="{Binding CustomerName}"/>
+                <DataGridTextColumn Width="3*" Header="Час" 
+                                    Binding="{Binding Time}"/>
+                <DataGridTextColumn Width="3*" Header="Ціна" 
+                                    Binding="{Binding Cost}"/>
+                <DataGridTextColumn Width="2*" Header="Статус" 
+                                    Binding="{Binding Status}"/>
+                
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+    </DockPanel>
+    
+    
+</UserControl>

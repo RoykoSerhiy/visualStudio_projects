@@ -1,0 +1,63 @@
+﻿<Window x:Class="CourceWord.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="650" Width="825" Closed="Window_Closed">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TabControl Name="tcElements" Height="100">
+                <TabItem Name="tiFile" Header="File">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <Button Name="btnCreateFile" Click="btnCreateFile_Click" Content="Create new"
+                                    Width="65" Height="20" Margin="5"
+                                    Background="White" BorderBrush="White"/>
+                            <Button Name="btnOpenFile" Click="btnOpenFile_Click" Content="Open" 
+                                    Width="65" Height="20" Margin="5"
+                                    Background="White" BorderBrush="White"/>
+                        </StackPanel>
+                        <StackPanel Name="spSaving" IsEnabled="False" Orientation="Vertical">
+                            <Button Name="btnSave" Click="btnSave_Click" Content="Save" 
+                                    Width="65" Height="20" Margin="5"
+                                    Background="White" BorderBrush="White"/>
+                            <Button Name="btnSaveAs" Click="btnSaveAs_Click" Content="Save As"
+                                    Width="65" Height="20" Margin="5"
+                                    Background="White" BorderBrush="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Name="ti" Header="View">
+                            
+                </TabItem>
+            </TabControl>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0"
+                            Name="spReciveList" Orientation="Vertical" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Label Content="Add Recive" Width="100" MaxHeight="35" Margin="5"/>
+                        <Button Name="btnAddRecive" Width="20" Height="20" Content="+"
+                                Click="btnAddRecive_Click"/>
+                    </StackPanel>
+                </StackPanel>
+                <TextBox Grid.Column="1" TextWrapping="Wrap" 
+                            ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                            AcceptsReturn="True" AcceptsTab="True" IsEnabled="False"
+                            Name="txbText" 
+                            Width="550" MinHeight="450" Margin="20,20" 
+                            BorderBrush="White" ClipToBounds="True"/>
+                <StackPanel Grid.Column="2" Name="spTextModified" Orientation="Vertical" IsEnabled="False">
+                    <Button Name="btnName" Click="btnNameClick"
+                            Content="Name"
+                            Width="40" Height="20" Margin="5"
+                            Background="White"
+                            BorderBrush="AliceBlue"/>
+                    <Button Name="Test" Width="20" Height="20" Click="Test_Click_1"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

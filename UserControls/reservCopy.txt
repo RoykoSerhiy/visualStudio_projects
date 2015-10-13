@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="Content/RegistationForm.css" />
+    <script type="text/javascript">
+        function NameValidation(oSrc , args) {
+            args.IsValid = args.Value.length > 5;
+        }
+    </script>
+</head>
+<body>
+    <form id="registrationForm" runat="server">
+       
+    </form>
+</body>
+</html>

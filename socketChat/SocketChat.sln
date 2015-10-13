@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketChat", "SocketChat\SocketChat.csproj", "{D09D9C13-EEB9-4491-B7F8-A1D5BB19CAFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "socketChatWPF", "socketChatWPF\socketChatWPF.csproj", "{D496F0BB-4AD6-4DCB-9FD0-2A2C265AB09C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D09D9C13-EEB9-4491-B7F8-A1D5BB19CAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09D9C13-EEB9-4491-B7F8-A1D5BB19CAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09D9C13-EEB9-4491-B7F8-A1D5BB19CAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09D9C13-EEB9-4491-B7F8-A1D5BB19CAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D496F0BB-4AD6-4DCB-9FD0-2A2C265AB09C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D496F0BB-4AD6-4DCB-9FD0-2A2C265AB09C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D496F0BB-4AD6-4DCB-9FD0-2A2C265AB09C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D496F0BB-4AD6-4DCB-9FD0-2A2C265AB09C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

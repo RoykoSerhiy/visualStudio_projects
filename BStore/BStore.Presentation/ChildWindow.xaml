@@ -1,0 +1,10 @@
+﻿<Window x:Class="BStore.Presentation.ChildWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ChildWindow" Height="290" Width="520"
+        xmlns:Views ="clr-namespace:BStore.Presentation.Views"
+        Loaded="Window_Loaded_1" ResizeMode="NoResize">
+    <Grid Name="forUC">
+        
+    </Grid>
+</Window>

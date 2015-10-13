@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B3D0050-42A4-4A17-8863-176DAE45A800}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>regform</RootNamespace>
+    <AssemblyName>regform</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\Common\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommonControls\ButtonsControl.ascx" />
+    <Content Include="CommonControls\CarRegistration.ascx" />
+    <Content Include="CommonControls\DriverRegistration.ascx" />
+    <Content Include="CommonControls\MainUserControl.ascx" />
+    <Content Include="CommonControls\RegLogControl.ascx" />
+    <Content Include="Content\calendar-blue.css" />
+    <Content Include="Content\Error.css" />
+    <Content Include="Content\GridStyle.css" />
+    <Content Include="Content\images\b2.jpg" />
+    <Content Include="Content\images\calender.png" />
+    <Content Include="Content\images\footer.gif" />
+    <Content Include="Content\images\grid-alt.png" />
+    <Content Include="Content\images\grid-header.png" />
+    <Content Include="Content\images\grid-pgr.png" />
+    <Content Include="Content\images\header_img.jpg" />
+    <Content Include="Content\images\wheel.GIF" />
+    <Content Include="Content\menu.css" />
+    <Content Include="Content\MenuList.css" />
+    <Content Include="Content\RegistationForm.css" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Content\script\calendar-en.min.js" />
+    <None Include="Content\script\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Content\script\jquery-1.4.1.js" />
+    <Content Include="Content\script\jquery-1.4.1.min.js" />
+    <Content Include="Content\script\jquery.dynDateTime.min.js" />
+    <Content Include="DriverProfile\AddPage.aspx" />
+    <Content Include="DriverProfile\Car\CarInfo.aspx" />
+    <Content Include="DriverProfile\EditPage.aspx" />
+    <Content Include="DriverProfile\History\DriverHistoryEdit.aspx" />
+    <Content Include="DriverProfile\History\DriverHistoryList.aspx" />
+    <Content Include="DriverProfile\ListPage.aspx" />
+    <Content Include="Error\ErrorPage.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Login\LoginPage.aspx" />
+    <Content Include="Menu.aspx" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="UserProfile\AddUser.aspx" />
+    <Content Include="UserProfile\EditUser.aspx" />
+    <Content Include="UserProfile\History\UserHistoryEdit.aspx" />
+    <Content Include="UserProfile\History\UserHistoryList.aspx" />
+    <Content Include="UserProfile\UserList.aspx" />
+    <Content Include="UserRegistration.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebService1.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\MPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\ButtonsControl.ascx.cs">
+      <DependentUpon>ButtonsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\ButtonsControl.ascx.designer.cs">
+      <DependentUpon>ButtonsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControls\CarRegistration.ascx.cs">
+      <DependentUpon>CarRegistration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\CarRegistration.ascx.designer.cs">
+      <DependentUpon>CarRegistration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControls\DriverRegistration.ascx.cs">
+      <DependentUpon>DriverRegistration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\DriverRegistration.ascx.designer.cs">
+      <DependentUpon>DriverRegistration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControls\MainUserControl.ascx.cs">
+      <DependentUpon>MainUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\MainUserControl.ascx.designer.cs">
+      <DependentUpon>MainUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonControls\RegLogControl.ascx.cs">
+      <DependentUpon>RegLogControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\RegLogControl.ascx.designer.cs">
+      <DependentUpon>RegLogControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverProfile\AddPage.aspx.cs">
+      <DependentUpon>AddPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DriverProfile\AddPage.aspx.designer.cs">
+      <DependentUpon>AddPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverProfile\Car\CarInfo.aspx.cs">
+      <DependentUpon>CarInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DriverProfile\Car\CarInfo.aspx.designer.cs">
+      <DependentUpon>CarInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverProfile\EditPage.aspx.cs">
+      <DependentUpon>EditPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DriverProfile\EditPage.aspx.designer.cs">
+      <DependentUpon>EditPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverProfile\History\DriverHistoryEdit.aspx.cs">
+      <DependentUpon>DriverHistoryEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DriverProfile\History\DriverHistoryEdit.aspx.designer.cs">
+      <DependentUpon>DriverHistoryEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverProfile\History\DriverHistoryList.aspx.cs">
+      <DependentUpon>DriverHistoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DriverProfile\History\DriverHistoryList.aspx.designer.cs">
+      <DependentUpon>DriverHistoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DriverProfile\ListPage.aspx.cs">
+      <DependentUpon>ListPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DriverProfile\ListPage.aspx.designer.cs">
+      <DependentUpon>ListPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.Master.cs">
+      <DependentUpon>MainPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.Master.designer.cs">
+      <DependentUpon>MainPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\SecurityService.cs" />
+    <Compile Include="UserProfile\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile\EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile\EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile\History\UserHistoryEdit.aspx.cs">
+      <DependentUpon>UserHistoryEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile\History\UserHistoryEdit.aspx.designer.cs">
+      <DependentUpon>UserHistoryEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile\History\UserHistoryList.aspx.cs">
+      <DependentUpon>UserHistoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile\History\UserHistoryList.aspx.designer.cs">
+      <DependentUpon>UserHistoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainPage.Master" />
+    <Content Include="packages.config" />
+    <Content Include="DriverProfile\Web.config" />
+    <Content Include="Login\Web.config" />
+    <Content Include="UserProfile\Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFirst\CodeFirst.csproj">
+      <Project>{794acbb4-aba2-42ee-82fd-ba1b3b685888}</Project>
+      <Name>CodeFirst</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\managerDll\managerDll.csproj">
+      <Project>{e7be1b7c-42b8-430b-ab18-caf62f61eb99}</Project>
+      <Name>managerDll</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1610/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

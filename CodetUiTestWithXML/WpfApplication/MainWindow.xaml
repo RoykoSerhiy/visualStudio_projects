@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="242.537" Width="322.015">
+    <Grid>
+        <Label Content="FName" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.558,2.921"/>
+        <Label Content="LName" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.558,2.921"/>
+        <TextBox Name="tbxFname" HorizontalAlignment="Left" Height="26" Margin="81,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="211"/>
+        <TextBox Name="tbxLName" HorizontalAlignment="Left" Height="26" Margin="81,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="211"/>
+        <Button   Content="Say Hello" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="282" Height="35" Click="Button_Click_1"/>
+        <TextBox Name="tbxRes" HorizontalAlignment="Left" Height="33" Margin="10,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="282"/>
+    </Grid>
+</Window>

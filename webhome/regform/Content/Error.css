@@ -1,0 +1,11 @@
+﻿body {
+    background-color: blue;
+}
+h2#title {
+    font:larger;
+}
+.text {
+    font-family:'Lucida Console';
+    text-decoration:none;
+    color:white;
+}

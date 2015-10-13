@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf2014_10_13", "Wpf2014_10_13\Wpf2014_10_13.csproj", "{1FE3F893-D082-44AB-8A40-E0FAFE3E9781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "anotherEx", "anotherEx\anotherEx.csproj", "{DC3F69E8-1C41-4866-91B5-19A057F91AD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FE3F893-D082-44AB-8A40-E0FAFE3E9781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE3F893-D082-44AB-8A40-E0FAFE3E9781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE3F893-D082-44AB-8A40-E0FAFE3E9781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE3F893-D082-44AB-8A40-E0FAFE3E9781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC3F69E8-1C41-4866-91B5-19A057F91AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3F69E8-1C41-4866-91B5-19A057F91AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3F69E8-1C41-4866-91B5-19A057F91AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3F69E8-1C41-4866-91B5-19A057F91AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

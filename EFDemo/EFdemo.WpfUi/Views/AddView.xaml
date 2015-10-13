@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="EFdemo.WpfUi.Views.AddView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="300">
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top" Background="LightCyan" Height="35" Orientation="Horizontal">
+            <Label Content="Last Name: " Width="100" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
+            <TextBox Name="txtBoxFirstName" Width="180" Height="25" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Top" Background="LightCyan" Height="35" Orientation="Horizontal">
+            <Label Content="First Name: " Width="100" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
+            <TextBox Name="txtBoxLastName" Width="180" Height="25" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Top" Background="LightCyan" Height="35" Orientation="Horizontal">
+            <Label Content="Position: " Width="100" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
+            <TextBox Name="txtBoxPosition" Width="180" Height="25" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Top" Background="LightCyan" Height="35" Orientation="Horizontal">
+            <Label Content="Phone: " Width="100" VerticalAlignment="Center" HorizontalContentAlignment="Right"/>
+            <TextBox Name="txtBoxPhone" Width="180" Height="25" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center" >
+            <Button Name="btnOk" Content="OK" Width="80" Height="25" Margin="5,5,20,5" Click="btnOk_Click" />
+            <Button Name="btnCancel" Content="Cancel" Width="80" Height="25" Margin="5,5,20,5" Click="btnCancel_Click" />
+        </StackPanel>
+    </DockPanel>
+</UserControl>

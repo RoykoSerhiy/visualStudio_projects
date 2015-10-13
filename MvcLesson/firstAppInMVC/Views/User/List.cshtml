@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <div>
+        <ol>
+            @foreach (firstAppInMVC.Models.RegistrationModel user in Model)
+            { 
+                <li>@user.Name @user.Surname</li>
+            }
+        </ol>
+        @Html.ActionLink("Register one more user","Index" , "Registration");
+    </div>
+</body>
+</html>

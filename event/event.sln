@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "event", "event\event.csproj", "{7FF38D42-43DF-4863-830E-2C675BE675AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multicasting", "Multicasting\Multicasting.csproj", "{DCD6EF60-5E44-4B0D-8410-000E08F436B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsinDelegate", "AsinDelegate\AsinDelegate.csproj", "{BB7D5C19-C705-4FF2-95AE-EAFEF1053DF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FF38D42-43DF-4863-830E-2C675BE675AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF38D42-43DF-4863-830E-2C675BE675AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF38D42-43DF-4863-830E-2C675BE675AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF38D42-43DF-4863-830E-2C675BE675AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD6EF60-5E44-4B0D-8410-000E08F436B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD6EF60-5E44-4B0D-8410-000E08F436B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD6EF60-5E44-4B0D-8410-000E08F436B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD6EF60-5E44-4B0D-8410-000E08F436B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB7D5C19-C705-4FF2-95AE-EAFEF1053DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB7D5C19-C705-4FF2-95AE-EAFEF1053DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB7D5C19-C705-4FF2-95AE-EAFEF1053DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB7D5C19-C705-4FF2-95AE-EAFEF1053DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

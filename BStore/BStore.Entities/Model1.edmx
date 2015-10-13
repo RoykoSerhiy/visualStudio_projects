@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище MagazinBDModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище MagazinBDModelContainer">
+          <EntitySet Name="Category" EntityType="Хранилище MagazinBDModel.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Customer" EntityType="Хранилище MagazinBDModel.Customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Measure" EntityType="Хранилище MagazinBDModel.Measure" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Order" EntityType="Хранилище MagazinBDModel.Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrderItem" EntityType="Хранилище MagazinBDModel.OrderItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Package" EntityType="Хранилище MagazinBDModel.Package" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Price" EntityType="Хранилище MagazinBDModel.Price" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Producer" EntityType="Хранилище MagazinBDModel.Producer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="Хранилище MagazinBDModel.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WareHouse" EntityType="Хранилище MagazinBDModel.WareHouse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WareHouseItem" EntityType="Хранилище MagazinBDModel.WareHouseItem" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="fk_Category_ParrentId_Category_Id" Association="Хранилище MagazinBDModel.fk_Category_ParrentId_Category_Id">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Category1" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Customer_CustomerId_Customer_Id" Association="Хранилище MagazinBDModel.fk_Customer_CustomerId_Customer_Id">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="fk_MeasureId_Measure_Id" Association="Хранилище MagazinBDModel.fk_MeasureId_Measure_Id">
+            <End Role="Measure" EntitySet="Measure" />
+            <End Role="Package" EntitySet="Package" />
+          </AssociationSet>
+          <AssociationSet Name="fk_OrderItem_OrderId_Order_Id" Association="Хранилище MagazinBDModel.fk_OrderItem_OrderId_Order_Id">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderItem" EntitySet="OrderItem" />
+          </AssociationSet>
+          <AssociationSet Name="fk_OrderItem_PackageId_Package_Id" Association="Хранилище MagazinBDModel.fk_OrderItem_PackageId_Package_Id">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="OrderItem" EntitySet="OrderItem" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Package_ProductId_Product_Id" Association="Хранилище MagazinBDModel.fk_Package_ProductId_Product_Id">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Package" EntitySet="Package" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Package_VolumeMeasureId_Measure_Id" Association="Хранилище MagazinBDModel.fk_Package_VolumeMeasureId_Measure_Id">
+            <End Role="Measure" EntitySet="Measure" />
+            <End Role="Package" EntitySet="Package" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Price_PackageId_Package_Id" Association="Хранилище MagazinBDModel.fk_Price_PackageId_Package_Id">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="Price" EntitySet="Price" />
+          </AssociationSet>
+          <AssociationSet Name="fk_WareHouseItem_PackageId_Package_Id" Association="Хранилище MagazinBDModel.fk_WareHouseItem_PackageId_Package_Id">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="WareHouseItem" EntitySet="WareHouseItem" />
+          </AssociationSet>
+          <AssociationSet Name="fk_WareHouseItem_WarehouseId_Warehouse_Id" Association="Хранилище MagazinBDModel.fk_WareHouseItem_WarehouseId_Warehouse_Id">
+            <End Role="WareHouse" EntitySet="WareHouse" />
+            <End Role="WareHouseItem" EntitySet="WareHouseItem" />
+          </AssociationSet>
+          <AssociationSet Name="kf_Product_CategoryId_Category_Id" Association="Хранилище MagazinBDModel.kf_Product_CategoryId_Category_Id">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="kf_Product_ProducerId_Producer_Id" Association="Хранилище MagazinBDModel.kf_Product_ProducerId_Producer_Id">
+            <End Role="Producer" EntitySet="Producer" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" />
+          <Property Name="Address" Type="nvarchar" MaxLength="128" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="Measure">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="ShortName" Type="nvarchar" Nullable="false" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="Cost" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="OrderType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="int" />
+          <Property Name="PackageId" Type="int" />
+          <Property Name="Quantity" Type="numeric" Nullable="false" Scale="2" />
+        </EntityType>
+        <EntityType Name="Package">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Volume" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="VolumeMeasureId" Type="int" Nullable="false" />
+          <Property Name="MeasureId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Price">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="UnitCost" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="PackageId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Producer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" />
+          <Property Name="Address" Type="nvarchar" MaxLength="512" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="512" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="ProducerId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WareHouse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="WareHouseItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WarehouseId" Type="int" />
+          <Property Name="PackageId" Type="int" />
+          <Property Name="Quantity" Type="numeric" Scale="2" />
+        </EntityType>
+        <Association Name="fk_Category_ParrentId_Category_Id">
+          <End Role="Category" Type="Хранилище MagazinBDModel.Category" Multiplicity="0..1" />
+          <End Role="Category1" Type="Хранилище MagazinBDModel.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Customer_CustomerId_Customer_Id">
+          <End Role="Customer" Type="Хранилище MagazinBDModel.Customer" Multiplicity="1" />
+          <End Role="Order" Type="Хранилище MagazinBDModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_MeasureId_Measure_Id">
+          <End Role="Measure" Type="Хранилище MagazinBDModel.Measure" Multiplicity="1" />
+          <End Role="Package" Type="Хранилище MagazinBDModel.Package" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Measure">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Package">
+              <PropertyRef Name="MeasureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_OrderItem_OrderId_Order_Id">
+          <End Role="Order" Type="Хранилище MagazinBDModel.Order" Multiplicity="0..1" />
+          <End Role="OrderItem" Type="Хранилище MagazinBDModel.OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_OrderItem_PackageId_Package_Id">
+          <End Role="Package" Type="Хранилище MagazinBDModel.Package" Multiplicity="0..1" />
+          <End Role="OrderItem" Type="Хранилище MagazinBDModel.OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="PackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Package_ProductId_Product_Id">
+          <End Role="Product" Type="Хранилище MagazinBDModel.Product" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Package" Type="Хранилище MagazinBDModel.Package" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Package">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Package_VolumeMeasureId_Measure_Id">
+          <End Role="Measure" Type="Хранилище MagazinBDModel.Measure" Multiplicity="1" />
+          <End Role="Package" Type="Хранилище MagazinBDModel.Package" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Measure">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Package">
+              <PropertyRef Name="VolumeMeasureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Price_PackageId_Package_Id">
+          <End Role="Package" Type="Хранилище MagazinBDModel.Package" Multiplicity="1" />
+          <End Role="Price" Type="Хранилище MagazinBDModel.Price" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Price">
+              <PropertyRef Name="PackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_WareHouseItem_PackageId_Package_Id">
+          <End Role="Package" Type="Хранилище MagazinBDModel.Package" Multiplicity="0..1" />
+          <End Role="WareHouseItem" Type="Хранилище MagazinBDModel.WareHouseItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WareHouseItem">
+              <PropertyRef Name="PackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_WareHouseItem_WarehouseId_Warehouse_Id">
+          <End Role="WareHouse" Type="Хранилище MagazinBDModel.WareHouse" Multiplicity="0..1" />
+          <End Role="WareHouseItem" Type="Хранилище MagazinBDModel.WareHouseItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WareHouse">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WareHouseItem">
+              <PropertyRef Name="WarehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kf_Product_CategoryId_Category_Id">
+          <End Role="Category" Type="Хранилище MagazinBDModel.Category" Multiplicity="1" />
+          <End Role="Product" Type="Хранилище MagazinBDModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kf_Product_ProducerId_Producer_Id">
+          <End Role="Producer" Type="Хранилище MagazinBDModel.Producer" Multiplicity="1" />
+          <End Role="Product" Type="Хранилище MagazinBDModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Producer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProducerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MagazinBDModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MagazinBDEntities3" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Category" EntityType="MagazinBDModel.Category" />
+          <EntitySet Name="Customer" EntityType="MagazinBDModel.Customer" />
+          <EntitySet Name="Measure" EntityType="MagazinBDModel.Measure" />
+          <EntitySet Name="Order" EntityType="MagazinBDModel.Order" />
+          <EntitySet Name="OrderItem" EntityType="MagazinBDModel.OrderItem" />
+          <EntitySet Name="Package" EntityType="MagazinBDModel.Package" />
+          <EntitySet Name="Price" EntityType="MagazinBDModel.Price" />
+          <EntitySet Name="Producer" EntityType="MagazinBDModel.Producer" />
+          <EntitySet Name="Product" EntityType="MagazinBDModel.Product" />
+          <EntitySet Name="WareHouse" EntityType="MagazinBDModel.WareHouse" />
+          <EntitySet Name="WareHouseItem" EntityType="MagazinBDModel.WareHouseItem" />
+          <AssociationSet Name="fk_Category_ParrentId_Category_Id" Association="MagazinBDModel.fk_Category_ParrentId_Category_Id">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Category1" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="kf_Product_CategoryId_Category_Id" Association="MagazinBDModel.kf_Product_CategoryId_Category_Id">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Customer_CustomerId_Customer_Id" Association="MagazinBDModel.fk_Customer_CustomerId_Customer_Id">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="fk_MeasureId_Measure_Id" Association="MagazinBDModel.fk_MeasureId_Measure_Id">
+            <End Role="Measure" EntitySet="Measure" />
+            <End Role="Package" EntitySet="Package" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Package_VolumeMeasureId_Measure_Id" Association="MagazinBDModel.fk_Package_VolumeMeasureId_Measure_Id">
+            <End Role="Measure" EntitySet="Measure" />
+            <End Role="Package" EntitySet="Package" />
+          </AssociationSet>
+          <AssociationSet Name="fk_OrderItem_OrderId_Order_Id" Association="MagazinBDModel.fk_OrderItem_OrderId_Order_Id">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderItem" EntitySet="OrderItem" />
+          </AssociationSet>
+          <AssociationSet Name="fk_OrderItem_PackageId_Package_Id" Association="MagazinBDModel.fk_OrderItem_PackageId_Package_Id">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="OrderItem" EntitySet="OrderItem" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Package_ProductId_Product_Id" Association="MagazinBDModel.fk_Package_ProductId_Product_Id">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Package" EntitySet="Package" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Price_PackageId_Package_Id" Association="MagazinBDModel.fk_Price_PackageId_Package_Id">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="Price" EntitySet="Price" />
+          </AssociationSet>
+          <AssociationSet Name="fk_WareHouseItem_PackageId_Package_Id" Association="MagazinBDModel.fk_WareHouseItem_PackageId_Package_Id">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="WareHouseItem" EntitySet="WareHouseItem" />
+          </AssociationSet>
+          <AssociationSet Name="kf_Product_ProducerId_Producer_Id" Association="MagazinBDModel.kf_Product_ProducerId_Producer_Id">
+            <End Role="Producer" EntitySet="Producer" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="fk_WareHouseItem_WarehouseId_Warehouse_Id" Association="MagazinBDModel.fk_WareHouseItem_WarehouseId_Warehouse_Id">
+            <End Role="WareHouse" EntitySet="WareHouse" />
+            <End Role="WareHouseItem" EntitySet="WareHouseItem" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Category1" Relationship="MagazinBDModel.fk_Category_ParrentId_Category_Id" FromRole="Category" ToRole="Category1" />
+          <NavigationProperty Name="Category2" Relationship="MagazinBDModel.fk_Category_ParrentId_Category_Id" FromRole="Category1" ToRole="Category" />
+          <NavigationProperty Name="Product" Relationship="MagazinBDModel.kf_Product_CategoryId_Category_Id" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Order" Relationship="MagazinBDModel.fk_Customer_CustomerId_Customer_Id" FromRole="Customer" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Measure">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="ShortName" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Package" Relationship="MagazinBDModel.fk_MeasureId_Measure_Id" FromRole="Measure" ToRole="Package" />
+          <NavigationProperty Name="Package1" Relationship="MagazinBDModel.fk_Package_VolumeMeasureId_Measure_Id" FromRole="Measure" ToRole="Package" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="OrderType" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="MagazinBDModel.fk_Customer_CustomerId_Customer_Id" FromRole="Order" ToRole="Customer" />
+          <NavigationProperty Name="OrderItem" Relationship="MagazinBDModel.fk_OrderItem_OrderId_Order_Id" FromRole="Order" ToRole="OrderItem" />
+        </EntityType>
+        <EntityType Name="OrderItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" />
+          <Property Name="PackageId" Type="Int32" />
+          <Property Name="Quantity" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="Order" Relationship="MagazinBDModel.fk_OrderItem_OrderId_Order_Id" FromRole="OrderItem" ToRole="Order" />
+          <NavigationProperty Name="Package" Relationship="MagazinBDModel.fk_OrderItem_PackageId_Package_Id" FromRole="OrderItem" ToRole="Package" />
+        </EntityType>
+        <EntityType Name="Package">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Volume" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="VolumeMeasureId" Type="Int32" Nullable="false" />
+          <Property Name="MeasureId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Measure" Relationship="MagazinBDModel.fk_MeasureId_Measure_Id" FromRole="Package" ToRole="Measure" />
+          <NavigationProperty Name="Measure1" Relationship="MagazinBDModel.fk_Package_VolumeMeasureId_Measure_Id" FromRole="Package" ToRole="Measure" />
+          <NavigationProperty Name="OrderItem" Relationship="MagazinBDModel.fk_OrderItem_PackageId_Package_Id" FromRole="Package" ToRole="OrderItem" />
+          <NavigationProperty Name="Product" Relationship="MagazinBDModel.fk_Package_ProductId_Product_Id" FromRole="Package" ToRole="Product" />
+          <NavigationProperty Name="Price" Relationship="MagazinBDModel.fk_Price_PackageId_Package_Id" FromRole="Package" ToRole="Price" />
+          <NavigationProperty Name="WareHouseItem" Relationship="MagazinBDModel.fk_WareHouseItem_PackageId_Package_Id" FromRole="Package" ToRole="WareHouseItem" />
+        </EntityType>
+        <EntityType Name="Price">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UnitCost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="PackageId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Package" Relationship="MagazinBDModel.fk_Price_PackageId_Package_Id" FromRole="Price" ToRole="Package" />
+        </EntityType>
+        <EntityType Name="Producer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Product" Relationship="MagazinBDModel.kf_Product_ProducerId_Producer_Id" FromRole="Producer" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="ProducerId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="MagazinBDModel.kf_Product_CategoryId_Category_Id" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="Package" Relationship="MagazinBDModel.fk_Package_ProductId_Product_Id" FromRole="Product" ToRole="Package" />
+          <NavigationProperty Name="Producer" Relationship="MagazinBDModel.kf_Product_ProducerId_Producer_Id" FromRole="Product" ToRole="Producer" />
+        </EntityType>
+        <EntityType Name="WareHouse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="WareHouseItem" Relationship="MagazinBDModel.fk_WareHouseItem_WarehouseId_Warehouse_Id" FromRole="WareHouse" ToRole="WareHouseItem" />
+        </EntityType>
+        <EntityType Name="WareHouseItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="WarehouseId" Type="Int32" />
+          <Property Name="PackageId" Type="Int32" />
+          <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" />
+          <NavigationProperty Name="Package" Relationship="MagazinBDModel.fk_WareHouseItem_PackageId_Package_Id" FromRole="WareHouseItem" ToRole="Package" />
+          <NavigationProperty Name="WareHouse" Relationship="MagazinBDModel.fk_WareHouseItem_WarehouseId_Warehouse_Id" FromRole="WareHouseItem" ToRole="WareHouse" />
+        </EntityType>
+        <Association Name="fk_Category_ParrentId_Category_Id">
+          <End Role="Category" Type="MagazinBDModel.Category" Multiplicity="0..1" />
+          <End Role="Category1" Type="MagazinBDModel.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kf_Product_CategoryId_Category_Id">
+          <End Role="Category" Type="MagazinBDModel.Category" Multiplicity="1" />
+          <End Role="Product" Type="MagazinBDModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Customer_CustomerId_Customer_Id">
+          <End Role="Customer" Type="MagazinBDModel.Customer" Multiplicity="1" />
+          <End Role="Order" Type="MagazinBDModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_MeasureId_Measure_Id">
+          <End Role="Measure" Type="MagazinBDModel.Measure" Multiplicity="1" />
+          <End Role="Package" Type="MagazinBDModel.Package" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Measure">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Package">
+              <PropertyRef Name="MeasureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Package_VolumeMeasureId_Measure_Id">
+          <End Role="Measure" Type="MagazinBDModel.Measure" Multiplicity="1" />
+          <End Role="Package" Type="MagazinBDModel.Package" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Measure">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Package">
+              <PropertyRef Name="VolumeMeasureId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_OrderItem_OrderId_Order_Id">
+          <End Role="Order" Type="MagazinBDModel.Order" Multiplicity="0..1" />
+          <End Role="OrderItem" Type="MagazinBDModel.OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_OrderItem_PackageId_Package_Id">
+          <End Role="Package" Type="MagazinBDModel.Package" Multiplicity="0..1" />
+          <End Role="OrderItem" Type="MagazinBDModel.OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="PackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Package_ProductId_Product_Id">
+          <End Role="Product" Type="MagazinBDModel.Product" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Package" Type="MagazinBDModel.Package" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Package">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Price_PackageId_Package_Id">
+          <End Role="Package" Type="MagazinBDModel.Package" Multiplicity="1" />
+          <End Role="Price" Type="MagazinBDModel.Price" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Price">
+              <PropertyRef Name="PackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_WareHouseItem_PackageId_Package_Id">
+          <End Role="Package" Type="MagazinBDModel.Package" Multiplicity="0..1" />
+          <End Role="WareHouseItem" Type="MagazinBDModel.WareHouseItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WareHouseItem">
+              <PropertyRef Name="PackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="kf_Product_ProducerId_Producer_Id">
+          <End Role="Producer" Type="MagazinBDModel.Producer" Multiplicity="1" />
+          <End Role="Product" Type="MagazinBDModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Producer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProducerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_WareHouseItem_WarehouseId_Warehouse_Id">
+          <End Role="WareHouse" Type="MagazinBDModel.WareHouse" Multiplicity="0..1" />
+          <End Role="WareHouseItem" Type="MagazinBDModel.WareHouseItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WareHouse">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WareHouseItem">
+              <PropertyRef Name="WarehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище MagazinBDModelContainer" CdmEntityContainer="MagazinBDEntities3">
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="MagazinBDModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="MagazinBDModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Measure">
+            <EntityTypeMapping TypeName="MagazinBDModel.Measure">
+              <MappingFragment StoreEntitySet="Measure">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="MagazinBDModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderItem">
+            <EntityTypeMapping TypeName="MagazinBDModel.OrderItem">
+              <MappingFragment StoreEntitySet="OrderItem">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Package">
+            <EntityTypeMapping TypeName="MagazinBDModel.Package">
+              <MappingFragment StoreEntitySet="Package">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="VolumeMeasureId" ColumnName="VolumeMeasureId" />
+                <ScalarProperty Name="MeasureId" ColumnName="MeasureId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Price">
+            <EntityTypeMapping TypeName="MagazinBDModel.Price">
+              <MappingFragment StoreEntitySet="Price">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Producer">
+            <EntityTypeMapping TypeName="MagazinBDModel.Producer">
+              <MappingFragment StoreEntitySet="Producer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="MagazinBDModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="ProducerId" ColumnName="ProducerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WareHouse">
+            <EntityTypeMapping TypeName="MagazinBDModel.WareHouse">
+              <MappingFragment StoreEntitySet="WareHouse">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WareHouseItem">
+            <EntityTypeMapping TypeName="MagazinBDModel.WareHouseItem">
+              <MappingFragment StoreEntitySet="WareHouseItem">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
+                <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

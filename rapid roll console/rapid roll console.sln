@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rapid roll console", "rapid roll console\rapid roll console.csproj", "{0C621C82-B879-48F4-B24C-B0C617AF8329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rapid roll double2", "rapid roll double2\rapid roll double2.csproj", "{29EB28E5-3CB7-4E13-B226-9787FB0F581F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{32ACFD76-6D00-48AF-965F-B908BB3A6DB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C621C82-B879-48F4-B24C-B0C617AF8329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C621C82-B879-48F4-B24C-B0C617AF8329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C621C82-B879-48F4-B24C-B0C617AF8329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C621C82-B879-48F4-B24C-B0C617AF8329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29EB28E5-3CB7-4E13-B226-9787FB0F581F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29EB28E5-3CB7-4E13-B226-9787FB0F581F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29EB28E5-3CB7-4E13-B226-9787FB0F581F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29EB28E5-3CB7-4E13-B226-9787FB0F581F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32ACFD76-6D00-48AF-965F-B908BB3A6DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32ACFD76-6D00-48AF-965F-B908BB3A6DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32ACFD76-6D00-48AF-965F-B908BB3A6DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32ACFD76-6D00-48AF-965F-B908BB3A6DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

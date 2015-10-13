@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="EFdemo.WpfUi.Views.OrderShow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="dgShowOrders" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CellEditEnding="dgShowOrders_CellEditEnding_1">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="Delete" Header="Delete" Click="Delete_Click_1"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="Id" Binding="{Binding id}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="3*" Header="Price" Binding="{Binding Price}"/>
+                <DataGridTextColumn Width="4*" Header="Description" Binding="{Binding Description}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DockPanel Grid.Row="1">
+            <Button Name="btnAddOrder" Content="Add" Width="70" Height="24" Margin="10" HorizontalAlignment="Left" Click="btnAddOrder_Click_1"/>
+            <Button Name="btnCancel" Content="Cancel" Width="70" Height="24" Margin="10" HorizontalAlignment="Right" Click="btnCancel_Click_1"/>
+        </DockPanel>
+    </Grid>
+</UserControl>

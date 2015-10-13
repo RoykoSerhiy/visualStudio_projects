@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "linq2", "linq2\linq2.csproj", "{5A4070DF-91EA-4963-B278-19E19BD94F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lambda", "Lambda\Lambda.csproj", "{C770FF44-22BD-4AE2-8FAE-DE07CD23D082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncDemo", "FuncDemo\FuncDemo.csproj", "{C919C414-1F8E-4817-8C27-326D59C835B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqEnother", "LinqEnother\LinqEnother.csproj", "{EE688F1F-07E0-4CEF-96FD-07E441E63466}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A4070DF-91EA-4963-B278-19E19BD94F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4070DF-91EA-4963-B278-19E19BD94F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4070DF-91EA-4963-B278-19E19BD94F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4070DF-91EA-4963-B278-19E19BD94F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C770FF44-22BD-4AE2-8FAE-DE07CD23D082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C770FF44-22BD-4AE2-8FAE-DE07CD23D082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C770FF44-22BD-4AE2-8FAE-DE07CD23D082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C770FF44-22BD-4AE2-8FAE-DE07CD23D082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C919C414-1F8E-4817-8C27-326D59C835B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C919C414-1F8E-4817-8C27-326D59C835B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C919C414-1F8E-4817-8C27-326D59C835B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C919C414-1F8E-4817-8C27-326D59C835B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE688F1F-07E0-4CEF-96FD-07E441E63466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE688F1F-07E0-4CEF-96FD-07E441E63466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE688F1F-07E0-4CEF-96FD-07E441E63466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE688F1F-07E0-4CEF-96FD-07E441E63466}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

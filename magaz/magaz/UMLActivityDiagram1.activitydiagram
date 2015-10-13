@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="5c38d309-d168-4fc6-989d-fc1b620c3b12" name="Activity1" linkedPackageId="afebaa8a-b30e-47f7-a18a-4dc14ac023af" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c16ed7f1-1423-4f2b-8c76-2c2c3a507ba6">
+      <profileInstance Id="80dfae27-d475-488d-864c-ca0f4b2dc653" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="13048977-e88c-487e-8267-e24a62f1d6d4">
+      <profileInstance Id="fbf80188-f530-4f76-9902-9ee9e1471bb3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="a4b4b64d-7496-4a0c-92e1-3c529d2b548a" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="cfade124-ae03-4806-8274-ccdf1a31eb65" />
+        <nodes>
+          <initialNode Id="2b599606-9f84-448a-9a60-d795cee7832d" name="Initial1" isLeaf="false">
+            <elementDefinition Id="6b3d1025-a569-47df-8a69-11e24e85a8a9" />
+            <flowNodeTargets>
+              <controlFlow Id="819476dd-8779-4ceb-914f-291370f5f07c" isLeaf="false">
+                <opaqueActionMoniker Id="72f4b8b2-964d-485c-a196-f574c10baa07" LastKnownName="Click on button registation" />
+                <elementDefinition Id="866ac515-c673-4f1e-89dc-0a000a2bc1d3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="72f4b8b2-964d-485c-a196-f574c10baa07" name="Click on button registation" isLeaf="false">
+            <elementDefinition Id="b1a7d56e-06f7-4364-a7aa-32f58c8b016b" />
+            <flowNodeTargets>
+              <controlFlow Id="b5dd540d-1aef-4367-84de-dd903b807358" isLeaf="false">
+                <opaqueActionMoniker Id="9f3cff85-6ebc-4663-bb0f-c1e3ea89454f" LastKnownName="Enter fiest last name" />
+                <elementDefinition Id="6cc1cd42-06d5-4b8a-b596-8eb106835ec1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="9f3cff85-6ebc-4663-bb0f-c1e3ea89454f" name="Enter fiest last name" isLeaf="false">
+            <elementDefinition Id="53fab7bb-4745-454e-8f13-c42987de743b" />
+            <flowNodeTargets>
+              <controlFlow Id="5b895e6e-b04b-484a-86d6-30c108dbcc4f" isLeaf="false">
+                <opaqueActionMoniker Id="3b66fe4d-21ec-48d1-a8d7-35d0abe78ce3" LastKnownName="Enter mail addres" />
+                <elementDefinition Id="90295e30-77f7-47db-b825-095de8b0ab2d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="3b66fe4d-21ec-48d1-a8d7-35d0abe78ce3" name="Enter mail addres" isLeaf="false">
+            <elementDefinition Id="745e2d7b-adb5-4465-8a4c-f51106991070" />
+            <flowNodeTargets>
+              <controlFlow Id="529c8baf-3ba9-4d56-a570-9257dc063e9e" isLeaf="false">
+                <forkNodeMoniker Id="cdafb324-bc73-4747-ab02-495369233bdb" LastKnownName="Fork1" />
+                <elementDefinition Id="0d40b595-c75c-4ed9-9124-f85ef8f10853" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="fa6e6ec9-a10f-4602-aaab-232bd1353a57" name="Decision1" isLeaf="false">
+            <elementDefinition Id="e07fad30-2bd7-4bca-ad0c-f97b25cd9d0d" />
+            <flowNodeTargets>
+              <controlFlow Id="6fb97133-b344-43ec-b988-04c1953dd21e" guard="if mail exist" isLeaf="false">
+                <opaqueActionMoniker Id="3b66fe4d-21ec-48d1-a8d7-35d0abe78ce3" LastKnownName="Enter mail addres" />
+                <elementDefinition Id="5ff5f7c3-4f2a-4ccc-98f7-f8264a81a37e" />
+              </controlFlow>
+              <controlFlow Id="7a2a26c9-7816-443f-9322-9cd8fcefb702" guard="mail adress not exist" isLeaf="false">
+                <opaqueActionMoniker Id="c2b58fd4-949b-442b-ad93-7517d7f844ee" LastKnownName="enter phone" />
+                <elementDefinition Id="155bc4aa-a0d1-4121-b9d0-1fd40a796d79" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="daa29b56-3905-4fc8-bbee-2f0490c8630c" name="Enter date of birth and sex" isLeaf="false">
+            <elementDefinition Id="97a0d1ba-f763-43ac-91a0-81995bbc6da0" />
+            <flowNodeTargets>
+              <controlFlow Id="2a7db112-c264-4efe-9097-0efe5c4d15c8" isLeaf="false">
+                <joinNodeMoniker Id="de188dce-cc91-4f87-9d58-0ef3bf770ace" LastKnownName="Join1" />
+                <elementDefinition Id="4220f55c-e01b-4d43-bbd0-4237f783ff91" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="cdafb324-bc73-4747-ab02-495369233bdb" name="Fork1" isLeaf="false">
+            <elementDefinition Id="0fd0b266-dee7-4501-aca1-291fec10ec10" />
+            <flowNodeTargets>
+              <controlFlow Id="230a88a9-6e9b-4867-b142-e011997dc522" isLeaf="false">
+                <opaqueActionMoniker Id="daa29b56-3905-4fc8-bbee-2f0490c8630c" LastKnownName="Enter date of birth and sex" />
+                <elementDefinition Id="2bfb4c12-86e6-46e9-b152-1e00ac927bea" />
+              </controlFlow>
+              <controlFlow Id="7ee7a85b-aa8a-472c-b7ec-7dbaeefa820e" isLeaf="false">
+                <opaqueActionMoniker Id="3efedcfd-e7b7-4bed-8067-3e3777970158" LastKnownName="Check mail addres" />
+                <elementDefinition Id="5b8c9801-c7fa-46cc-8ac2-f3bfe5013021" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="3efedcfd-e7b7-4bed-8067-3e3777970158" name="Check mail addres" isLeaf="false">
+            <elementDefinition Id="14451f34-904c-4b08-817f-581cdd27d84d" />
+            <flowNodeTargets>
+              <controlFlow Id="7df0e78d-8cc6-40c1-9ebb-6dfaa58c7638" isLeaf="false">
+                <decisionNodeMoniker Id="fa6e6ec9-a10f-4602-aaab-232bd1353a57" LastKnownName="Decision1" />
+                <elementDefinition Id="d0dde51c-7472-4683-bb5c-6ff6cedd3fa0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c2b58fd4-949b-442b-ad93-7517d7f844ee" name="enter phone" isLeaf="false">
+            <elementDefinition Id="11aa8d4d-0c55-44cb-9ef1-98e00c7f19fc" />
+            <flowNodeTargets>
+              <controlFlow Id="e4761cae-4abb-4912-9c95-f66ff145d692" isLeaf="false">
+                <joinNodeMoniker Id="de188dce-cc91-4f87-9d58-0ef3bf770ace" LastKnownName="Join1" />
+                <elementDefinition Id="92670066-85db-46aa-90a3-e8a52bb705c0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode Id="de188dce-cc91-4f87-9d58-0ef3bf770ace" name="Join1" isLeaf="false">
+            <elementDefinition Id="453bfa5b-fc3a-4941-acb2-7588564fdce9" />
+            <flowNodeTargets>
+              <controlFlow Id="9e65ba88-3344-474b-af3e-1c53099e967c" isLeaf="false">
+                <decisionNodeMoniker Id="ed511032-8f7b-4973-9476-addb7cdc369d" LastKnownName="Decision2" />
+                <elementDefinition Id="66d2ec9b-f62a-4fa4-9fc4-05727c80efe9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction Id="00d4552d-8d30-4488-a6c3-e02ed9cf4ecd" name="Kapcha" isLeaf="false">
+            <elementDefinition Id="8d6cb862-96bb-464c-924f-b55eba2d5661" />
+            <flowNodeTargets>
+              <controlFlow Id="13f6b11b-b4e3-4a98-8aca-d09003cbf1e8" isLeaf="false">
+                <decisionNodeMoniker Id="c88d7c59-6cd0-4ebb-b7a4-e639bcf47aff" LastKnownName="Decision5" />
+                <elementDefinition Id="517e4a25-d735-4957-afb1-0c74b99a1044" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="ed511032-8f7b-4973-9476-addb7cdc369d" name="Decision2" isLeaf="false">
+            <elementDefinition Id="efe558e1-c296-4f2f-9c9a-44e9b51e2ec9" />
+            <flowNodeTargets>
+              <controlFlow Id="3df8d0eb-eef4-4486-aea7-7b580a6f84ff" guard="is kapcha true" isLeaf="false">
+                <opaqueActionMoniker Id="00d4552d-8d30-4488-a6c3-e02ed9cf4ecd" LastKnownName="Kapcha" />
+                <elementDefinition Id="c55ac24e-0492-4a57-99a3-65293a06e4b5" />
+              </controlFlow>
+              <controlFlow Id="574bb456-e5db-427e-a679-2a6719801c98" guard="is kapcha falce" isLeaf="false">
+                <opaqueActionMoniker Id="5bd793a8-f4e8-40f5-b7cd-5e19c485bb3a" LastKnownName="Send SMS" />
+                <elementDefinition Id="8e8af5f2-8663-4a08-9e94-bd9b7e2d3187" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="5bd793a8-f4e8-40f5-b7cd-5e19c485bb3a" name="Send SMS" isLeaf="false">
+            <elementDefinition Id="d668445d-c8e7-4f4c-9b2d-795543dbb440" />
+            <flowNodeTargets>
+              <controlFlow Id="7ff5790c-7370-4b10-95c2-76fee929c9d8" isLeaf="false">
+                <decisionNodeMoniker Id="bd661b4e-b8bc-4e76-a978-a29a0d765494" LastKnownName="Decision3" />
+                <elementDefinition Id="b94f1786-49ef-43d9-91ac-fe8e4de9ec51" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="bd661b4e-b8bc-4e76-a978-a29a0d765494" name="Decision3" isLeaf="false">
+            <elementDefinition Id="b0eb9401-588b-4919-b4e5-258a6b73f583" />
+            <flowNodeTargets>
+              <controlFlow Id="28f1012e-3034-4eda-a251-240bc6107f09" guard="phone not exist" isLeaf="false">
+                <opaqueActionMoniker Id="c2b58fd4-949b-442b-ad93-7517d7f844ee" LastKnownName="enter phone" />
+                <elementDefinition Id="ab5f32d7-53ea-4274-9462-f3fd5bf30836" />
+              </controlFlow>
+              <controlFlow Id="9650022f-b282-441f-bae6-ad30ad8a0180" guard="Phone exist" isLeaf="false">
+                <opaqueActionMoniker Id="3134e31b-acbc-4efd-a6b5-c944bb3c4965" LastKnownName="Enter code  in sms" />
+                <elementDefinition Id="98f359ba-4ec7-4730-8456-7b719ccb8f90" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="3134e31b-acbc-4efd-a6b5-c944bb3c4965" name="Enter code  in sms" isLeaf="false">
+            <elementDefinition Id="fe4918c4-ea07-4e97-97a4-52107ea51cc5" />
+            <flowNodeTargets>
+              <controlFlow Id="13412132-53f0-4c58-a76f-25fcd3051e0c" isLeaf="false">
+                <decisionNodeMoniker Id="f033f5b7-294a-4cf0-8cdc-f5e2cea98f48" LastKnownName="Decision4" />
+                <elementDefinition Id="d9d8abe2-916e-42fe-8c65-b61def701f87" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="f033f5b7-294a-4cf0-8cdc-f5e2cea98f48" name="Decision4" isLeaf="false">
+            <elementDefinition Id="a7daed65-593f-4f0c-b2bc-518f093f5efc" />
+            <flowNodeTargets>
+              <controlFlow Id="1b63f9d2-62f5-4870-89b8-07996b2fb098" guard="wrong code" isLeaf="false">
+                <opaqueActionMoniker Id="5bd793a8-f4e8-40f5-b7cd-5e19c485bb3a" LastKnownName="Send SMS" />
+                <elementDefinition Id="46471620-982a-460d-9de2-512b2f32ec97" />
+              </controlFlow>
+              <controlFlow Id="13e6b1ae-4ae9-4d31-a52b-dfd120ca9b42" guard="true code" isLeaf="false">
+                <opaqueActionMoniker Id="368fc994-f72f-47ad-b2a6-2d7f8340b454" LastKnownName="Sucsess" />
+                <elementDefinition Id="17e9524f-9c08-492e-af6e-823f7c841602" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="368fc994-f72f-47ad-b2a6-2d7f8340b454" name="Sucsess" isLeaf="false">
+            <elementDefinition Id="ae94a1ad-5b36-4a72-8b84-eb8fb2b27907" />
+            <flowNodeTargets>
+              <controlFlow Id="8fd3e50b-9ab5-458c-9edd-500d3f7225d3" isLeaf="false">
+                <activityFinalNodeMoniker Id="ad2c8a41-fe1f-419e-82a1-70c4547586b5" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="188bdfdf-43d6-4031-b3e1-a402cdfa128f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="ad2c8a41-fe1f-419e-82a1-70c4547586b5" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="239d5a34-c642-4f2f-b8fc-15ff7696ffce" />
+          </activityFinalNode>
+          <decisionNode Id="c88d7c59-6cd0-4ebb-b7a4-e639bcf47aff" name="Decision5" isLeaf="false">
+            <elementDefinition Id="b4b0d307-b53b-43c9-a522-c3c20910dc40" />
+            <flowNodeTargets>
+              <controlFlow Id="642b151f-c751-4802-9d39-bd51b3e65936" guard="true kapcha" isLeaf="false">
+                <opaqueActionMoniker Id="368fc994-f72f-47ad-b2a6-2d7f8340b454" LastKnownName="Sucsess" />
+                <elementDefinition Id="d6452f85-8f24-491e-92bc-704a47dd7ce6" />
+              </controlFlow>
+              <controlFlow Id="c95ab321-d385-40c6-8169-25a1631102c1" guard="wrong kapcha" isLeaf="false">
+                <opaqueActionMoniker Id="00d4552d-8d30-4488-a6c3-e02ed9cf4ecd" LastKnownName="Kapcha" />
+                <elementDefinition Id="7d5803e1-3929-4a11-8fae-db16adffb8bb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="afebaa8a-b30e-47f7-a18a-4dc14ac023af" name="magaz">
+    <elementDefinition Id="766e7e66-2122-4513-b3d7-cdb1f84d2b6c" />
+  </package>
+</activityRootModel>

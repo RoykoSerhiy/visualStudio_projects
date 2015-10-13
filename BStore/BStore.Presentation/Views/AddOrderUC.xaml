@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="BStore.Presentation.Views.AddOrdreUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded_1"
+             Height="300" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Content="Customer"/>
+        <Label Content="Date" Margin="365,0,0,0"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <ComboBox Name="cmbCustomer" Width="300" Height="40" Margin="5,20,0,0" ItemsSource="{Binding}" SelectionChanged="cmbCustomer_SelectionChanged_1"/>
+            <Button Name="btnAddCust" Width="50" Height="40" Margin="5,20,0,0" Content="ADD" Click="btnAddCust_Click_1"/>
+            <DatePicker Name="dpOrder" Height="40" Margin="10,20,0,0" SelectedDateChanged="dpOrder_SelectedDateChanged_1"/>
+            <GroupBox Width="120" Margin="5,0,0,0" Height="80" Header="Status">
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Name="rbDraft" Content="Draft" Margin="2" Checked="rbDraft_Checked_1"/>
+                    <RadioButton Name="rbReject" Content="Reject" Margin="2" Checked="rbReject_Checked_1"/>
+                    <RadioButton Name="rbUncknown" Content="unknown" Margin="2"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <DataGrid Grid.Row="1" Name="dgOICatalog" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                  ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" IsReadOnly="True" Header="#" Binding="{Binding Id}"/>
+                <DataGridTextColumn Width="3*" Header="Product Name" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Width="2*" Header="Quantity" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Width="*" Header="Cost" Binding="{Binding Cost}"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Button Name="btnOK" Height="30" Width="50" Margin="5,0,0,0" Content="OK" Click="btnOK_Click_1"/>
+            <Button Name="btnPackageQuantity" Height="30" Width="120" Margin="5,0,0,0" Content="Add Pg Quantity"/>
+            <Button Name="btnAddPackage" Height="30" Width="120" Margin="5,0,0,0" Content="Add Package" Click="btnAddPackage_Click_1"/>
+            <GroupBox Width="135" Margin="20,0,0,0" Header="Order Type">
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton Name="rbInput" Content="Input" Margin="10,0,0,0"  Checked="rbInput_Checked_1"/>
+                    <RadioButton Name="rbOutput" Content="Output" Margin="10,0,0,0" Checked="rbOutput_Checked_1" />
+                </StackPanel>
+            </GroupBox>
+            <TextBox Name="txbCost" Width="100" Height="30" Margin="10,0,0,0" Text="Enter Cost"/>
+        </StackPanel>
+    </Grid>
+    
+</UserControl>

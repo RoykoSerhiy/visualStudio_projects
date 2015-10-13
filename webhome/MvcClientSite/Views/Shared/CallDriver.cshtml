@@ -1,0 +1,11 @@
+﻿@model MvcClientSite.Models.CallDriverModel
+
+
+   
+<ul>
+   <li>Name:@Html.TextBoxFor(model => model.Name)</li>
+   <li>Depature Addres:@Html.DropDownListFor(model => model.DepatureStreet, Model.StreetList, new {Id = "ddlDepatureAddres" })</li>
+   <li>Destination Addres:@Html.DropDownListFor(model => model.DestinationStreet, Model.StreetList, new {Id = "ddlDestinationAddres"})</li>
+   <li><input type="submit" id="btnSearchDriver" value="Search driver" /></li>
+</ul>
+ 

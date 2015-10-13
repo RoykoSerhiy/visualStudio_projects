@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.12.14", "18.12.14\18.12.14.csproj", "{8B1D81AC-1278-4243-9E47-D60580DDAED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "semaphore", "semaphore\semaphore.csproj", "{6E0EB532-4AC1-40A9-96A2-11C4A485071C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualReset", "ManualReset\ManualReset.csproj", "{F52D17B0-A848-4DBC-8747-04F8EF70BF59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B1D81AC-1278-4243-9E47-D60580DDAED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1D81AC-1278-4243-9E47-D60580DDAED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1D81AC-1278-4243-9E47-D60580DDAED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1D81AC-1278-4243-9E47-D60580DDAED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0EB532-4AC1-40A9-96A2-11C4A485071C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0EB532-4AC1-40A9-96A2-11C4A485071C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0EB532-4AC1-40A9-96A2-11C4A485071C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0EB532-4AC1-40A9-96A2-11C4A485071C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52D17B0-A848-4DBC-8747-04F8EF70BF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52D17B0-A848-4DBC-8747-04F8EF70BF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52D17B0-A848-4DBC-8747-04F8EF70BF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52D17B0-A848-4DBC-8747-04F8EF70BF59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
